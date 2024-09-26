@@ -1,0 +1,23 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    # Я запущу filebeat в докере и проброшу логи приложения по данному пути
+    paths:
+      - /log_nginx/access.log
+    # В fields мы можем указать дополнительные поля, а затем в logstash вытаскивать их
+    # и делать какую-нибудь дополнительную работу с логами
+    fields:
+      # Название нашего сервиса
+      service: nginx
+      
+  # - type: log
+  #   enabled: true
+  #   paths:
+  #     - /log_gen/log_gen.log
+
+  #   fields:
+  #     service: log_gen
+  #     organisation: netology
+
+output.logstash:
+  hosts: ["logstash:5044"]
