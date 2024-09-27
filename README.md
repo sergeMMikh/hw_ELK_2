@@ -47,7 +47,7 @@ Filebeat следует сконфигурировать для отправки
 **Решение**
 
 - *для более удобного отображения списка запущенных контейнеров я воспользовался утилитой [docker-pretty](https://habr.com/ru/companies/flant/articles/436896/)*</br>
-<img src="images/Task_1_0.png" alt="Task_1_0.png" width="500" height="auto"></br>
+   <img src="images/Task_1_0.png" alt="Task_1_0.png" width="500" height="auto"></br>
 Вместо директории `help` из задания я использовал [репозиторий](https://github.com/vegasbrianc/prometheus/blob/master/docker-compose.yml).</br></br>
 *скриншот интерфейса kibana*</br>
    <img src="images/Task_1_2.png" alt="Task_1_2.png" width="500" height="auto"></br>
@@ -60,6 +60,20 @@ Filebeat следует сконфигурировать для отправки
 
 В манифесте директории help также приведенно dummy-приложение, которое генерирует рандомные события в stdout-контейнера.
 Эти логи должны порождать индекс logstash-* в elasticsearch. Если этого индекса нет — воспользуйтесь советами и источниками из раздела «Дополнительные ссылки» этого задания.
+
+**Решение**
+
+- *создан `index`*</br>
+   <img src="images/Task_2_1.png" alt="Task_2_1.png" width="500" height="auto"></br>
+Вместо директории `help` из задания я использовал [репозиторий](https://github.com/vegasbrianc/prometheus/blob/master/docker-compose.yml).</br></br>
+- *используется поле `@timestamp`*</br>
+   <img src="images/Task_2_2.png" alt="Task_2_2.png" width="500" height="auto"></br>
+- *выбрал из списка поле `agent.id` для поиска `@timestamp`*</br>
+   <img src="images/Task_2_4.png" alt="Task_2_4.png" width="500" height="auto"></br>
+- *результаты поиска*</br>
+   <img src="images/Task_2_3.png" alt="Task_2_3.png" width="500" height="auto"></br>
+- *результаты поиска по тексту*</br>
+   <img src="images/Task_2_5.png" alt="Task_2_5.png" width="500" height="auto"></br>
  
 ---
 
