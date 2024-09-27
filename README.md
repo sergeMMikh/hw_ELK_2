@@ -44,6 +44,14 @@ Filebeat следует сконфигурировать для отправки
 - docker-compose манифест (если вы не использовали директорию help);
 - ваши yml-конфигурации для стека (если вы не использовали директорию help).
 
+**Решение**
+
+- *для более удобного отображения списка запущенных контейнеров я воспользовался утилитой [docker-pretty](https://habr.com/ru/companies/flant/articles/436896/)*</br>
+<img src="images/Task_1_0.png" alt="Task_1_0.png" width="500" height="auto"></br>
+Вместо директории `help` из задания я использовал [репозиторий](https://github.com/vegasbrianc/prometheus/blob/master/docker-compose.yml).</br></br>
+*скриншот интерфейса kibana*</br>
+   <img src="images/Task_1_2.png" alt="Task_1_2.png" width="500" height="auto"></br>
+
 ## Задание 2
 
 Перейдите в меню [создания index-patterns  в kibana](http://localhost:5601/app/management/kibana/indexPatterns/create) и создайте несколько index-patterns из имеющихся.
